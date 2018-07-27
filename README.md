@@ -19,8 +19,13 @@ image-rendering: crisp-edges;
 - only `inline` or `inline-block` elements have `vertical-align` and its default value is `baseline`.
   what is `baseline`? check the last inline element, if no content `baseline` is its rect bottom, otherwise `baseline` is the last line's character baseline  
 
+## SVG
+
+- `begin` attribute of `<animateTransform>` element actually stands for the loaded time of the page (i.e. the load time of svg element) even if it was appended dynamically.
+
 ## Others
 
 - Chrome Bug: `mousedown` event will trigger a `mousemove` event immediately, even if the cursor not moved at all.
+- Undo/Redo: whenever an `undoStop` created, `redoStack` should be cleared.
 
 - to be continued
