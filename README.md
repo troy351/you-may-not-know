@@ -3,6 +3,12 @@
 ## JavaScript
 
 - `CanvasRenderingContext2D.globalCompositeOperation` can sets the type of compositing operation to apply when drawing new shapes, very useful when drawing complex shapes.
+- how to implement `drag`?
+  - bind `mousedown` on target element
+  - in `mousedown` callback, bind `mousemove` and `mouseup` on `window`
+  - in `mouseup` callback, unbind `mousemove` and `mouseup` on `window`
+  - why bind on `window`? bind `mousemove` and `mouseup` on `window` rather than the target element/`body`/`document` could prevent event trigger unexpectedly when moving outside target element or browser window
+- bind the same event with the same callback multiple times will only take effect once, see [MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Multiple_identical_event_listeners)
 
 ## CSS
 
