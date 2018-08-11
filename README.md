@@ -28,6 +28,8 @@ image-rendering: crisp-edges;
 ## SVG
 
 - `begin` attribute of `<animateTransform>` element actually stands for the loaded time of the page (i.e. the load time of svg element) even if it was appended dynamically.
+- `<img>` with svg source image could not always get the correct `naturalWidth`/ `naturalHeight`.
+  see at https://github.com/whatwg/html/issues/3510#issuecomment-369982529
 
 ## Others
 
