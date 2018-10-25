@@ -35,5 +35,6 @@ image-rendering: crisp-edges;
 
 - Chrome Bug: `mousedown` event will trigger a `mousemove` event immediately, even if the cursor not moved at all.
 - Undo/Redo: whenever an `undoStop` created, `redoStack` should be cleared.
+- Chrome will block videos with sound autoplay when click refresh button, manually run `video.play()` or just add `mute` attribute should solve this.
 
 - to be continued
