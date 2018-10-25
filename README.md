@@ -9,6 +9,21 @@
   - in `mouseup` callback, unbind `mousemove` and `mouseup` on `window`
   - why bind on `window`? bind `mousemove` and `mouseup` on `window` rather than the target element/`body`/`document` could prevent event trigger unexpectedly when moving outside target element or browser window
 - bind the same event with the same callback multiple times will only take effect once, see [MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Multiple_identical_event_listeners)
+- how to replay audio? `audio.pause(); audio.currentTime = 0; audio.play();`
+- Safari won't load audio unless user click. Solution: play just 1ms, after user clicked.
+```javascript
+const el = document.getElementsById(elName);
+const audio = new Audio(audioPath);
+let audioLoader = () => {
+    audio.play();
+    setTimeout(() => {
+        audio.pause();
+    }, 1)
+    
+    document.body.removeEventListener('click', audioLoader);
+}
+document.body.addEventListener('click', audioLoader);
+```
 
 ## CSS
 
@@ -30,6 +45,11 @@ image-rendering: crisp-edges;
 - `begin` attribute of `<animateTransform>` element actually stands for the loaded time of the page (i.e. the load time of svg element) even if it was appended dynamically.
 - `<img>` with svg source image could not always get the correct `naturalWidth`/ `naturalHeight`.
   see at https://github.com/whatwg/html/issues/3510#issuecomment-369982529
+
+## Cool Effects
+
+- [Shape-shifter](https://github.com/kennethcachia/shape-shifter)
+- [Breathing-halftone](https://github.com/desandro/breathing-halftone)
 
 ## Others
 
