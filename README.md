@@ -28,7 +28,7 @@ document.body.addEventListener('click', audioLoader);
 ## CSS
 
 - `pointer-events: none` can make elements ignore all mouse events even it's on top
-- with `flex` layout, children will expaned when content too long, set `width: 0` to avoid it
+- with `flex` layout, children will expaned when content too long, set `width: 0` when `flex-direction: 'row'` and `height: 0` when `flex-direction: 'column'` to avoid it
 - scaling down image may causing it blurry, use code below to prevent it
 ```css
 image-rendering: -moz-crisp-edges;         /* Firefox */
