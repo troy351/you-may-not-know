@@ -41,7 +41,8 @@ image-rendering: crisp-edges;
 -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 ```
 - Only `inline` or `inline-block` elements have `vertical-align` and its default value is `baseline`.
-  what is `baseline`? check the last inline element, if no content `baseline` is its rect bottom, otherwise `baseline` is the last line's character baseline  
+  what is `baseline`? check the last inline element, if no content `baseline` is its rect bottom, otherwise `baseline` is the last line's character baseline
+- How to make text with `letter-spacing` centered? Add `text-indent` with the same value as `letter-spacing`
 
 ## SVG
 
