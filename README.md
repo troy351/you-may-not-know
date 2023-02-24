@@ -26,6 +26,11 @@ document.body.addEventListener('click', audioLoader);
 ```
 - Sort Array by Dict. Assume there is an array `const arr = [{name:'John', age: 10}, {name:'Bob', age: 12}, {name:'Jack', age: 10}]`. How to sort the array by `age` and if same then by `name`?
 `arr.sort((a, b) => a.age - b.age || a.name.localeCompare(b.name))`
+- `Array.indexOf` vs `Array.includes`
+  ```js
+  [NaN].includes(NaN) // true, using SameValueZero for comparison under the hood
+  [NaN].indexOf(NaN) // -1, using === for comparison under the hood
+  ```
   
 
 ## CSS
