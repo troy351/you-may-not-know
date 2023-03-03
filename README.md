@@ -31,7 +31,7 @@ document.body.addEventListener('click', audioLoader);
   [NaN].includes(NaN) // true, using SameValueZero for comparison under the hood
   [NaN].indexOf(NaN) // -1, using === for comparison under the hood
   ```
-  
+- `clearTimeout` and `clearInterval` can replace each other.
 
 ## CSS
 
